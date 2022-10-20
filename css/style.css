@@ -1,9 +1,72 @@
 *{
     margin: 0px; 
     padding: 0px;
-    display: border-box;
 }
 
 body{
-   background-color: aqua;
+    box-sizing: border-box;
+    width: 100%;
 }
+
+#wrapper{
+    display: grid;
+    grid-template-areas: 
+    "hd"
+    "cb"
+    "ft";
+}
+
+header{
+    grid-area: hd;
+    height: 400px;
+    background-image: url(../assets/ninjahead.svg);
+    background-color: rgba(62,224,126,255);
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-position-y: bottom;
+    background-size: 150px;
+}
+
+nav{
+    height: 10%;
+    width: 100%;
+   background-color: rgba(50,250,126,255);
+}
+
+.hd-content{
+    display: flex; 
+    max-height: 300px;
+    max-width: 100%; 
+    justify-content: center;
+    align-items: center;
+}
+
+.site-tag{
+    padding-top: 50%;
+    padding-bottom: 50%;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.content-box{
+    grid-area: cb;
+    border: solid 1px black; 
+    height: 1000px;
+
+}
+
+footer{
+    display: grid;
+    grid-area: ft;
+    border: solid 1px black;
+    height: 250px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+
+
+}
+
